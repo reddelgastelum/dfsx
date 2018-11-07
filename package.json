@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sync-request": "^6.0.0"
+    "sync-request": "^6.0.0",
+    "xml-js": "^1.6.8"
   }
 }
