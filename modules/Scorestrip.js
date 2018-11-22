@@ -105,6 +105,22 @@ class Scorestrip {
     }
     return result;
   }
+
+  getOppOf(team) {
+    let data = this.getData();
+    let games = data.gms;
+    let result = null;
+    for (let i = 0; i < games.length; i++) {
+
+      if ((games[i].h == team) && (games[i].q == 'P')) {
+        return games[i].v;
+      } else if ((games[i].v == team) && (games[i].q == 'P')) {
+        return games[i].h;
+      } else {
+        return 'This game already occured.';
+      }
+    }
+  }
 }
 
 module.exports = Scorestrip;
